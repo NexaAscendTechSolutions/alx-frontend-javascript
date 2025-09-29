@@ -18,7 +18,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation as a normal function
+// Implementation of the function with destructured args
 function printTeacher({
   firstName,
   lastName,
