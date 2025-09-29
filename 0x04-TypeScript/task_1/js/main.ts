@@ -18,10 +18,13 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation of the function (✅ matches checker)
-function printTeacher(firstName: string, lastName: string): string {
+// Implementation of the function (✅ no destructuring)
+const printTeacher: printTeacherFunction = function (
+  firstName: string,
+  lastName: string
+): string {
   return `${firstName}. ${lastName}`;
-}
+};
 
 // Example usage
 console.log(printTeacher("John", "Doe")); // J. Doe
