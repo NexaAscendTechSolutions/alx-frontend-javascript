@@ -8,13 +8,13 @@ interface Teacher {
   [key: string]: any;
 }
 
-// Directors interface extending Teacher
-interface Directors extends Teacher {
+// Director interface extending Teacher
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
 // Example usage
-const director1: Directors = {
+const director1: Director = {
   firstName: "John",
   lastName: "Doe",
   location: "London",
