@@ -18,16 +18,10 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation as a normal function
-function printTeacher({
-  firstName,
-  lastName,
-}: {
-  firstName: string;
-  lastName: string;
-}): string {
-  return `${firstName}. ${lastName}`;
-}
+// Implementation as an arrow function (✅)
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return firstName.charAt(0) + ". " + lastName;
+};
 
 // Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher("John", "Doe")); // J. Doe
