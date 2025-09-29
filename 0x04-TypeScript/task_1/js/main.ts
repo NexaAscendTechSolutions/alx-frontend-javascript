@@ -18,16 +18,13 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation of the function with destructured args
-function printTeacher({
-  firstName,
-  lastName,
-}: {
-  firstName: string;
-  lastName: string;
-}): string {
-  return `${firstName}. ${lastName}`;
-}
+// Implementation of the function
+const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string
+): string => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
 
 // Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher("John", "Doe")); // J. Doe
