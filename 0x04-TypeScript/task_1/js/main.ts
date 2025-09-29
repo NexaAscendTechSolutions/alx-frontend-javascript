@@ -18,9 +18,9 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation of the function (✅ matches interface)
+// Implementation using arrow function ✅
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName[0]}. ${lastName}`;
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
 
 // Example usage
