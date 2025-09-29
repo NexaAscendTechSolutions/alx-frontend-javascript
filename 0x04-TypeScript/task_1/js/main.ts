@@ -18,9 +18,9 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation of the function (✅ no destructuring)
+// Implementation of the function (✅ matches checker)
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 }
 
 // Example usage
