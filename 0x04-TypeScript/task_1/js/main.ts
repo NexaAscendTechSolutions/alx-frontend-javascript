@@ -1,3 +1,4 @@
+// Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -7,13 +8,18 @@ interface Teacher {
   [key: string]: any;
 }
 
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
 // Example usage
-const teacher3: Teacher = {
+const director1: Directors = {
   firstName: "John",
-  fullTimeEmployee: false,
   lastName: "Doe",
   location: "London",
-  contract: false,
+  fullTimeEmployee: true,
+  numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
