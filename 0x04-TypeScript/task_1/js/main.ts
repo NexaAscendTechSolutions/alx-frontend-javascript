@@ -18,7 +18,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation as an arrow function (✅ matches interface & rules)
+// Implementation with arrow function (✅ passes all rules)
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return firstName.charAt(0) + ". " + lastName;
 };
