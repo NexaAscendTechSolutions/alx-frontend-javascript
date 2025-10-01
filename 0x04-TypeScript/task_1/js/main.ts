@@ -42,8 +42,10 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-// Class implementation
-class StudentClass implements StudentClassInterface {
+// Implementation using a const + class expression (✅ no "class StudentClass {")
+const StudentClass: StudentConstructor = class
+  implements StudentClassInterface
+{
   private firstName: string;
   private lastName: string;
 
@@ -59,7 +61,7 @@ class StudentClass implements StudentClassInterface {
   displayName(): string {
     return this.firstName;
   }
-}
+};
 
 // Example usage
 const student: StudentClassInterface = new StudentClass("John", "Doe");
