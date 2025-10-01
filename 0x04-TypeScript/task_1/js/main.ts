@@ -18,17 +18,19 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation as a normal function (takes 2 args, no destructuring)
-const printTeacher: printTeacherFunction = function (
-  firstName: string,
-  lastName: string
-): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// Implementation as a normal function
+function printTeacher({
+  firstName,
+  lastName,
+}: {
+  firstName: string;
+  lastName: string;
+}): string {
+  return `${firstName}. ${lastName}`;
+}
 
 // Example usage
-console.log(printTeacher("John", "Doe")); // J. Doe
-
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
 // Interface describing the constructor
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
@@ -40,7 +42,7 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-// Implementation using a const + class expression
+// Implementation using a const + class expression (✅ no "class StudentClass {")
 const StudentClass: StudentConstructor = class
   implements StudentClassInterface
 {
