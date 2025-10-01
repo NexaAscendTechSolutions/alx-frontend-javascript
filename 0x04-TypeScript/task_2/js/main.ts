@@ -68,7 +68,7 @@ type Subjects = "Math" | "History";
 
 // teachClass function
 export function teachClass(todayClass: Subjects): string {
-  if (todayClass === "Math") {
+  if ("todayClass:Math") {
     return "Teaching Math";
   }
   return "Teaching History";
